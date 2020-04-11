@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Impressive CSS3 Product Showcase | Tutorialzine Demo</title>
+        
+        <!-- Google Webfonts and our stylesheet -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow|Open+Sans:300" />
+        <link rel="stylesheet" href="static/css/styles.css" />
+        
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body>
+
+		<div id="impress" class="impress-not-supported">
+			
+			<div id="intro" class="step" data-x="0" data-y="0">
+		        <h2>Ryan Samarakoon</h2>
+				<p>4 years in Biotechnology<br>2 years in Computational Neuroscience<br>Self-Taught Coder<br></p>
+				<img class="firstimg" src="static/img/lab.png" width="100" height="100" alt="Coder" />
+				<img class="nextimg" src="static/img/artificial-intelligence.png" width="100" height="100" alt="Coder" />
+				<img class="lastimg" src="static/img/web-development.png" width="100" height="100" alt="Coder" />
+		    </div>
+		    
+		    <div id="biotech" class="step" data-x="1100" data-y="1200" data-scale="1.8" data-rotate="190">
+		        <h2>Biotechnology</h2>
+				<p>2 years at the Gladstone Institutes investigating the genetic causes of a congenital heart disease known as left ventricular non-compaction (LVNC).</p>
+				<a href="https://science-sciencemag-org.stanford.idm.oclc.org/content/364/6443/865">Check out this publication from <span>Science</span>!</a>
+				<p class="nextp">2 years at Stanford University investigating what signals the retina sends to the brain to process vision. The lab also focuses on developing an artificial retinal implant for blind patients.</p>
+				<img class="firstimg" src="static/img/gladstone.png" width="145" height="128" alt="Gladstone" />
+				<img class="nextimg" src="static/img/stanford.png" width="85" height="128" alt="Stanford" />
+		    </div>
+		    
+		    <div id="compneu" class="step" data-x="-300" data-y="600" data-scale="0.2" data-rotate="270">
+		        <h2>Computational Neuroscience</h2>
+		        <p>At Stanford, we use a random white noise sequence to visually stimulate retinal ganglion cells and evoke a response. The spike triggered average (top-left) is calculated from spikes (bottom-left) with our custom lab software. A mosaic of receptive fields (right) can then be calculated, for multiple cell types. We then proceed to electrically stimulate cells to mimick the spikes produced by the visual stimulus. Essentially, we decode the signals and try to encode them by electrical stimulus.</p>
+		        <img src="static/img/staAndMosaics.png" width="558" height="248" alt="STA & Mosaic" />
+		    </div>
+		    
+		    <div id="coding" class="step" data-x="-200" data-y="1500" data-rotate="180">
+		        <h2>Coding Skills</h2>
+		        <p>Working Knowledge: HTML, CSS, JavaScript, Unix/Linux, Git, Python<br>Basic Knowledge: C++, Java, jQuery/jQueryUI, Bootstrap, MySQL</p>
+		        <img src="static/img/code.png" width="120" height="120" alt="Code" />
+		    </div>
+		    
+		    <div id="contact" class="step" data-x="-1200" data-y="1000" data-scale="0.8" data-rotate="270">
+				<h2>Contact Me</h2>
+				<p>I'm always looking for new opportunities to further my coding skills and career. You can contact me via email or LinkedIn.</p>
+				<a href="mailto:samarakoon.ryan@gmail.com"><img class="firstimg" src="static/img/mail.png" width="50" height="50" alt="Email" /></a>
+				<a href="https://www.linkedin.com/in/ryansamarakoon/"><img class="lastimg" src="static/img/linkedin.png" width="50" height="50" alt="LinkedIn" /></a>
+		    </div>
+		    
+		</div>
+
+		<a id="arrowLeft" class="arrow">&lt;</a>
+		<a id="arrowRight" class="arrow">&gt;</a>
+
+        <!-- <footer>
+	        <h2>Contact Me:</h2>
+            <a class="links" href="http://rsamarakoon.com">Check this out!</a>
+        </footer> -->
+        
+        <!-- JavaScript includes -->
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="static/js/impress.js"></script>
+		<script src="static/js/script.js"></script>
+
+    </body>
+</html>
+
