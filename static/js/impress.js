@@ -22,15 +22,15 @@
     
     var pfx = (function () {
 
-        var style = document.createElement('dummy').style,
-            prefixes = 'Webkit Moz O ms Khtml'.split(' '),
+        var style = document.createElement("dummy").style,
+            prefixes = "Webkit Moz O ms Khtml".split(" "),
             memory = {};
             
         return function ( prop ) {
             if ( typeof memory[ prop ] === "undefined" ) {
 
                 var ucProp  = prop.charAt(0).toUpperCase() + prop.substr(1),
-                    props   = (prop + ' ' + prefixes.join(ucProp + ' ') + ucProp).split(' ');
+                    props   = (prop + " " + prefixes.join(ucProp + " ") + ucProp).split(" ");
 
                 memory[ prop ] = null;
                 for ( var i in props ) {
@@ -56,7 +56,7 @@
         for ( key in props ) {
             if ( props.hasOwnProperty(key) ) {
                 pkey = pfx(key);
-                if ( pkey != null ) {
+                if ( pkey !== null ) {
                     el.style[pkey] = props[key];
                 }
             }
@@ -103,10 +103,10 @@
     // CHECK SUPPORT
     
     var ua = navigator.userAgent.toLowerCase();
-    var impressSupported = ( pfx("perspective") != null ) &&
+    var impressSupported = ( pfx("perspective") !== null ) &&
                            ( document.body.classList ) &&
                            ( document.body.dataset ) &&
-                           ( ua.search(/(iphone)|(ipod)|(android)/) == -1 );
+                           ( ua.search(/(iphone)|(ipod)|(android)/) === -1 );
     
     var roots = {};
     
@@ -135,8 +135,8 @@
         // hardcoding these values looks pretty bad, as they kind of depend on the content
         // so they should be at least configurable
         meta.content = "width=1024, minimum-scale=0.75, maximum-scale=0.75, user-scalable=no";
-        if (meta.parentNode != document.head) {
-            meta.name = 'viewport';
+        if (meta.parentNode !== document.head) {
+            meta.name = "viewport";
             document.head.appendChild(meta);
         }
         
@@ -227,7 +227,7 @@
         var hashTimeout = null;
         
         var goto = function ( el ) {
-            if ( !isStep(el) || el == active) {
+            if ( !isStep(el) || el === active) {
                 // selected element is not defined as step or is already active
                 return false;
             }
@@ -341,11 +341,11 @@
 // EVENTS
 
 (function ( document, window ) {
-    'use strict';
+    "use strict";
     
     // keyboard navigation handler
     document.addEventListener("keydown", function ( event ) {
-        if ( event.keyCode == 9 || ( event.keyCode >= 32 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) ) {
+        if ( event.keyCode === 9 || ( event.keyCode >= 32 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) ) {
             switch( event.keyCode ) {
                 case 33: ; // pg up
                 case 37: ; // left
@@ -370,16 +370,16 @@
         // event delegation with "bubbling"
         // check if event target (or any of its parents is a link)
         var target = event.target;
-        while ( (target.tagName != "A") &&
+        while ( (target.tagName !== "A") &&
                 (target != document.body) ) {
             target = target.parentNode;
         }
         
-        if ( target.tagName == "A" ) {
+        if ( target.tagName === "A" ) {
             var href = target.getAttribute("href");
             
             // if it's a link to presentation step, target this step
-            if ( href && href[0] == '#' ) {
+            if ( href && href[0] === "#" ) {
                 target = document.getElementById( href.slice(1) );
             }
         }
@@ -395,7 +395,7 @@
         var target = event.target;
         // find closest step element
         while ( !target.classList.contains("step") &&
-                (target != document.body) ) {
+                (target !== document.body) ) {
             target = target.parentNode;
         }
         
