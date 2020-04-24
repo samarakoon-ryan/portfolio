@@ -1,0 +1,2 @@
+# portfolio
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/34fbf97c02494b779bf2a6a4f5dd6bd9)](https://app.codacy.com/manual/samarakoon.ryan/portfolio?utm_source=github.com&utm_medium=referral&utm_content=samarakoon-ryan/portfolio&utm_campaign=Badge_Grade_Settings)
